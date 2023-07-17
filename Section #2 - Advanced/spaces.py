@@ -1,10 +1,8 @@
-#pylint:disable=no-member
-
 import cv2 as cv
 import matplotlib.pyplot as plt
 
 img = cv.imread('../Resources/Photos/park.jpg')
-cv.imshow('Park', img)
+cv.imshow('Boston', img)
 
 # plt.imshow(img)
 # plt.show()
@@ -17,13 +15,13 @@ cv.imshow('Gray', gray)
 hsv = cv.cvtColor(img, cv.COLOR_BGR2HSV)
 cv.imshow('HSV', hsv)
 
-# BGR to L*a*b
+# BGR to LAB
 lab = cv.cvtColor(img, cv.COLOR_BGR2LAB)
 cv.imshow('LAB', lab)
 
 # BGR to RGB
 rgb = cv.cvtColor(img, cv.COLOR_BGR2RGB)
-cv.imshow('RGB', rgb)
+cv.imshow('RGB', img)
 
 # HSV to BGR
 lab_bgr = cv.cvtColor(lab, cv.COLOR_LAB2BGR)
